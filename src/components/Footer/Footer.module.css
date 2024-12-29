@@ -1,0 +1,113 @@
+/* Main container */
+.footerContainer {
+    background-color: black;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Roboto', Arial, sans-serif;
+  }
+  
+  /* Icon container */
+  .iconContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 20px;
+  }
+  
+  /* Icon wrapper */
+  .iconWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Circle styling */
+  .circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #f0a500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .circle:hover {
+    transform: scale(1.1);
+    background-color: #ff7f00;
+  }
+  
+  /* Icon styling */
+  .icon {
+    font-size: 36px;
+    color: white;
+  }
+  
+  /* Text under each circle */
+  .iconText {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #ccc;
+  }
+  
+  /* CopyRight container */
+  .copyRight {
+    margin-top: 20px;
+    font-size: 14px;
+    animation: fadeIn 2s ease-in;
+  }
+  
+  /* Highlight the developer's name */
+  .highlight {
+    color: #f0a500;
+    font-weight: bold;
+    animation: colorPulse 3s infinite alternate;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes colorPulse {
+    from {
+      color: #f0a500;
+    }
+    to {
+      color: #ff7f00;
+    }
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .iconContainer {
+      flex-direction: column;
+    }
+  
+    .circle {
+      width: 60px;
+      height: 60px;
+    }
+  
+    .icon {
+      font-size: 28px;
+    }
+  
+    .iconText {
+      font-size: 12px;
+    }
+  
+    .copyRight {
+      font-size: 12px;
+    }
+  }
+  

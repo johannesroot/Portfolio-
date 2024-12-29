@@ -1,0 +1,72 @@
+/* Services.module.css */
+
+/* Main section for services */
+.servicesSection {
+    padding: 60px 40px;
+    background-color: black; /* Set background to black */
+    color: white;
+    text-align: center;
+  }
+  
+  /* Section title */
+  .sectionTitle {
+    font-size: 36px;
+    font-weight: bold;
+    color: #f0a500;
+    margin-bottom: 80px; /* Adds space below the title */
+    text-transform: uppercase;
+    display: block; /* Ensures the title is not part of the grid */
+  }
+  
+  /* Main container for the service boxes */
+  .servicesContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 50px; /* Space between services */
+    justify-items: center; /* Center the boxes */
+  }
+  
+  /* Each individual service box */
+  .serviceBox {
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Hover effect for the service box */
+  .serviceBox:hover {
+    transform: translateY(-10px);
+  }
+  
+  /* Icon styling */
+  .icon {
+    font-size: 50px;
+    color: #f0a500;
+    margin-bottom: 20px;
+  }
+  
+  /* Service title styling */
+  .serviceTitle {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  /* Responsive layout for smaller screens */
+  @media (max-width: 768px) {
+    .servicesContainer {
+      grid-template-columns: 1fr 1fr; /* 2 columns */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .servicesContainer {
+      grid-template-columns: 1fr; /* 1 column */
+    }
+  }
+  

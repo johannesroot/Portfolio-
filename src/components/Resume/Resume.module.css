@@ -1,0 +1,57 @@
+/* Resume.module.css */
+
+/* Main container for the Resume section */
+.resumeContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px; /* Space between the cards */
+    padding: 50px 40px;
+    background-color: black; /* Set background to black */
+    color: white;
+    opacity: 0; /* Start hidden */
+    transform: translateY(30px); /* Start with a slight downward position */
+    transition: opacity 1s, transform 1s; /* Smooth transition for visibility and position */
+  }
+  
+  /* When the section comes into view */
+  .resumeContainer.visible {
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Slide up */
+  }
+  
+  /* Individual card style */
+  .card {
+    background-color: #1a1a1a;
+    padding: 40px;
+    border-radius: 12px;
+    width: 45%;
+    box-shadow: 0 4px 10px rgba(230, 214, 214, 0.4); /* Shadow for depth */
+  }
+  
+  /* Card title styling */
+  .cardTitle {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    color: #f0a500;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* Card content text styling */
+  .cardContent {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #ccc;
+    font-weight: 400;
+  }
+  
+  /* Responsiveness for smaller screens */
+  @media (max-width: 768px) {
+    .card {
+      width: 100%;
+    }
+  }
+  

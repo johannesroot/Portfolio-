@@ -1,0 +1,131 @@
+/* Main container */
+.main-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows the elements to wrap on smaller screens */
+  height: 600px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding: 60px 40px;
+  gap: 30px;
+  box-sizing: border-box; /* Ensures padding doesn't affect layout */
+}
+
+/* Text container */
+.text-container {
+  max-width: 50%;
+  margin-left: 170px;
+  flex: 1; /* Allows text container to resize based on available space */
+}
+
+.greeting {
+  font-size: 34px;
+  margin: 0;
+}
+
+.name {
+  font-size: 68px;
+  font-weight: bold;
+  margin: 8px 0;
+  color: #f0a500;
+  border-right: 4px solid white;
+  width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 4s steps(20) 1s forwards, cursorDisappear 0.5s steps(1) 4s forwards;
+}
+
+.profession {
+  font-size: 44px;
+  font-weight: bolder;
+  margin: 0;
+  font-weight: 300;
+}
+
+/* Image container */
+.image-container {
+  max-width: 40%;
+  margin-right: 150px;
+  flex: 1; /* Allows image container to resize based on available space */
+}
+
+.profile-image {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+/* Typewriter animation */
+@keyframes typing {
+  100% {
+    width: 100%; /* Gradually increases the width */
+  }
+}
+
+/* Cursor disappears after typing */
+@keyframes cursorDisappear {
+  100% {
+    border-color: transparent; /* Makes the cursor disappear */
+  }
+}
+
+/* Responsive styles for tablets and smaller screens */
+@media (max-width: 1024px) {
+  .main-container {
+    flex-direction: column; /* Stack the text and image containers */
+    height: auto; /* Remove fixed height to accommodate stacked layout */
+    padding: 40px 20px; /* Reduce padding */
+  }
+
+  .text-container {
+    max-width: 100%;
+    margin-left: 0;
+    margin-bottom: 20px; /* Adds space between text and image */
+  }
+
+  .image-container {
+    max-width: 100%;
+    margin-right: 0;
+  }
+
+  .name {
+    font-size: 36px; /* Adjust font size for smaller screens */
+  }
+
+  .profession {
+    font-size: 20px; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .name {
+    font-size: 28px; /* Smaller font size for smaller devices */
+  }
+
+  .greeting, .profession {
+    font-size: 18px; /* Smaller font size for smaller devices */
+  }
+
+  .text-container {
+    padding: 0 15px; /* Reduce text container padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .main-container {
+    padding: 20px 10px; /* Further reduced padding */
+  }
+
+  .name {
+    font-size: 24px; /* Further reduce font size */
+  }
+
+  .profession {
+    font-size: 16px; /* Further reduce font size */
+  }
+
+  .text-container {
+    text-align: center; /* Center-align text for smaller screens */
+  }
+}

@@ -1,0 +1,175 @@
+/* About section container */
+.aboutContainer {
+  display: flex;
+  flex-wrap: wrap;  /* Allows items to wrap for smaller screens */
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 40px;
+  background-color: black;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  color: white;
+  box-sizing: border-box;  /* Ensures padding doesn't affect the layout */
+}
+
+/* Image container */
+.imageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px; /* Adds space between image and text on small screens */
+}
+
+.profileImage {
+  width: 250px;  /* Increased image size */
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #fff;  /* White border around the image */
+  transition: transform 0.3s ease; /* Smooth scaling effect on hover */
+}
+
+.profileImage:hover {
+  transform: scale(1.1); /* Enlarges the image on hover */
+}
+
+/* Text container for about me */
+.aboutTextContainer {
+  flex: 2;
+  padding-left: 30px;
+  max-width: 60%;
+}
+
+.aboutTitle {
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
+  animation: colorChange 3s infinite alternate;
+}
+
+@keyframes colorChange {
+  0% {
+    color: #ff007f; /* Pinkish color */
+  }
+  50% {
+    color: #00d1b2; /* Teal color */
+  }
+  100% {
+    color: #ffb100; /* Yellow color */
+  }
+}
+
+.aboutDescription {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.contactButtons {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.contactBtn, .portfolioBtn {
+  background-color: #333;
+  color: rgb(225, 211, 211);
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.contactBtn:hover, .portfolioBtn:hover {
+  background-color: #452323;
+  color: #ffffff;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1024px) {
+  .aboutContainer {
+    flex-direction: column; /* Stack the image and text */
+    padding: 40px 20px; /* Reduce padding for smaller screens */
+  }
+
+  .aboutTextContainer {
+    max-width: 100%; /* Allow text container to take full width */
+    padding-left: 0; /* Remove left padding */
+    text-align: center; /* Center-align the text */
+  }
+
+  .imageContainer {
+    margin-bottom: 30px; /* More space between image and text */
+  }
+
+  .profileImage {
+    width: 200px;  /* Slightly smaller image size */
+    height: 200px;
+  }
+
+  .aboutTitle {
+    font-size: 32px;  /* Slightly smaller font size */
+  }
+
+  .aboutDescription {
+    font-size: 16px;  /* Adjust font size for better readability */
+  }
+
+  .contactBtn, .portfolioBtn {
+    padding: 10px 25px; /* Adjust button padding */
+    font-size: 14px; /* Adjust button font size */
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutTitle {
+    font-size: 28px;  /* Reduce font size for small screens */
+  }
+
+  .aboutDescription {
+    font-size: 14px;  /* Smaller description font size */
+  }
+
+  .profileImage {
+    width: 180px;  /* Further reduce image size */
+    height: 180px;
+  }
+
+  .contactBtn, .portfolioBtn {
+    padding: 8px 20px; /* Smaller button size */
+    font-size: 14px;  /* Adjust button font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutContainer {
+    padding: 20px 10px; /* Further reduce padding */
+  }
+
+  .aboutTextContainer {
+    text-align: center; /* Center-align the text for small screens */
+  }
+
+  .profileImage {
+    width: 150px;  /* Further reduce image size */
+    height: 150px;
+  }
+
+  .aboutTitle {
+    font-size: 24px;  /* Smaller title font size */
+  }
+
+  .aboutDescription {
+    font-size: 12px;  /* Further reduce description font size */
+  }
+
+  .contactBtn, .portfolioBtn {
+    padding: 8px 18px; /* Smaller button size */
+    font-size: 12px;  /* Smaller button font size */
+  }
+}

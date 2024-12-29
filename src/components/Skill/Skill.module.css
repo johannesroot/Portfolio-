@@ -1,0 +1,119 @@
+/* Main container for the skills */
+.skillsContainer {
+  padding: 20px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-family: 'Roboto', Arial, sans-serif;
+  min-height: 100vh; /* Full screen height */
+  overflow: hidden; /* Hides the scrollbar */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Title styling */
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #f0a500;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Skill grid layout */
+.skillGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns by default */
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+  width: 100%; /* Full width */
+}
+
+/* Individual skill box */
+.skillBox {
+  background-color: #1a1a1a;
+  width: 150px; /* Consistent size */
+  height: 150px; /* Consistent size */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+.skillBox:hover {
+  transform: scale(1.05);
+  background-color: #f0a500;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+}
+
+/* Icon styling */
+.icon {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+/* Skill name */
+.skillName {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Responsive design for medium screens */
+@media (max-width: 1024px) {
+  .skillGrid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 15px;
+  }
+
+  .skillBox {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+/* Responsive design for small screens */
+@media (max-width: 768px) {
+  .skillGrid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  }
+
+  .skillBox {
+    width: 130px;
+    height: 130px;
+  }
+
+  .title {
+    font-size: 28px; /* Slightly smaller title */
+  }
+}
+
+/* Responsive design for very small screens */
+@media (max-width: 480px) {
+  .skillGrid {
+    grid-template-columns: 1fr; /* Single column */
+    gap: 10px;
+  }
+
+  .skillBox {
+    width: 120px;
+    height: 120px;
+  }
+
+  .icon {
+    font-size: 28px; /* Smaller icon size */
+  }
+
+  .skillName {
+    font-size: 12px; /* Smaller text size */
+  }
+}
