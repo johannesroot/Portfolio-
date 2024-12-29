@@ -4,7 +4,7 @@ import contactImage from "../../assets/image/joo.jpg";
 
 const Contact = () => {
   return (
-    <div className={styles.contactContainer}>
+    <div className={styles.contactContainer} id="contact">
       <div className={styles.imageSection}>
         <img src={contactImage} alt="Contact" className={styles.contactImage} />
       </div>

@@ -28,7 +28,7 @@ const Resume = () => {
   }, []);
 
   return (
-    <section className={`${styles.resumeContainer} ${inView ? styles.visible : ''}`} ref={resumeRef}>
+    <section className={`${styles.resumeContainer} ${inView ? styles.visible : ''}`} id="resume" ref={resumeRef}>
       <div className={styles.card}>
         <h2 className={styles.cardTitle}>Dedicated Developer</h2>
         <p className={styles.cardContent}>

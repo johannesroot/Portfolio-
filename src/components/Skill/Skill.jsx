@@ -25,7 +25,7 @@ const skills = [
 
 const Skill = () => {
   return (
-    <div className={styles.skillsContainer}>
+    <div className={styles.skillsContainer} id="skills">
       <h1 className={styles.title}>My Skills</h1>
       <div className={styles.skillGrid}>
         {skills.map((skill, index) => (

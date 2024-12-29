@@ -8,6 +8,7 @@
   background-color: black;
   color: white;
   padding: 60px 40px;
+  margin-top: 60px;
   gap: 30px;
   box-sizing: border-box; /* Ensures padding doesn't affect layout */
 }

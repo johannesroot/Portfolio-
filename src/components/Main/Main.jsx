@@ -4,7 +4,7 @@ import john from "../../assets/image/joo.jpg";  // Correct path to the image
 
 const Main = () => {
   return (
-    <main className="main-container">
+    <main className="main-container" id="main">
       <div className="text-container">
         <p className="greeting">Hello</p>
         <h1 className="name">Yohannes Gigar</h1>

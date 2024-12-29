@@ -4,7 +4,7 @@ import john from "../../assets/image/joo.jpg";  // Same image
 
 const About = () => {
   return (
-    <section className={styles.aboutContainer}>
+    <section className={styles.aboutContainer} id="about">
       <div className={styles.imageContainer}>
         <img src={john} alt="Profile" className={styles.profileImage} />
       </div>

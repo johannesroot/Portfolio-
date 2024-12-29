@@ -4,7 +4,7 @@ import styles from './Services.module.css';
 
 const Services = () => {
   return (
-    <section className={styles.servicesSection}>
+    <section className={styles.servicesSection} id="services">
       <h2 className={styles.sectionTitle}>Services</h2> {/* Title above all boxes */}
       <div className={styles.servicesContainer}>
         <div className={styles.serviceBox}>
