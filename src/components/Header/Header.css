@@ -4,20 +4,17 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000; /* Ensures it stays on top */
-  background-color: #fff;
+  z-index: 1000; 
   display: flex;
+  justify-content: space-between;
   flex-direction: column; /* Stack content vertically */
-  align-items: stretch; /* Ensure full width for children */
+  align-items: center; /* Ensure full width for children */
   background-color: #000000;
   color: white;
-  padding: 15px 20px;
-  transition: all 0.3s ease; /* Smooth transition for height adjustment */
-}
-
-.header.menu-open {
-  height: auto; /* Ensure height adjusts for expanded menu */
-}
+  padding: 10px 20px;
+ 
+ }
+ 
 
 .logo {
   list-style: none;
@@ -28,7 +25,7 @@
   color: white;
   text-decoration: none;
   font-weight: bold;
-  font-size: 49px;
+  font-size: 40px;
 }
 
 /* Menu icon for toggling (mobile view only) */
@@ -38,49 +35,58 @@
   cursor: pointer;
   align-self: flex-end; /* Align menu icon to the right */
 }
-
-/* Navigation links (hidden by default for mobile) */
-.nav-links {
-  height: 80px;
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-  margin-top: 15px;
+ .side-nav {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Initially hidden off-screen */
+  width: 130px;
+  height: 100%;
+  background-color: #111;
+  transition: left 0.3s ease; /* Smooth transition for sliding */
+  z-index: 999; /* Ensure it stays on top of content */
+  padding-top: 60px;
+  border: 2px solid #553a3a;
 }
 
-.nav-links.show {
-  display: flex; /* Show menu when toggled */
+.side-nav.open {
+  left: 0; /* Slide in the menu when it's open */
 }
 
-.nav-links ul {
-  list-style: none; /* Remove bullets */
+.side-nav ul {
+  list-style: none;
   padding: 0;
   margin: 0;
-  margin-right: 200px;
-  width: 100%;
-  text-align: center; /* Center align links */
 }
 
-.nav-links li {
-  margin: 10px 0;
+.side-nav li {
+  padding: 15px;
+  text-align: center;
 }
 
-.nav-links a {
+.side-nav a {
   color: white;
   text-decoration: none;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 600;
+  display: block;
   transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
+.side-nav a:hover {
   color: #f0a500;
 }
+
+/* To make sure the content shifts when the menu is open */
+body.menu-open {
+  overflow: hidden; /* Prevent scrolling of the body when menu is open */
+}
+
 
 /* Desktop view: Larger than tablet size */
 @media (min-width: 768px) {
   .header {
+    display: flex;
+    padding: 20px 20px;
     flex-direction: row; /* Arrange content horizontally */
     justify-content: space-between;
     align-items: center;
@@ -91,28 +97,32 @@
     display: none; /* Hide menu icon for desktop */
   }
 
-  .nav-links {
-    display: flex; /* Show links by default */
+  .side-nav {
+    display: block; /* Show links by default */
     flex-direction: row;
     gap: 30px; /* Add space between links */
-    margin-top: 0;
+    margin-top: auto;
   }
 
-  .nav-links ul {
+  .side-nav ul {
     display: flex; /* Flexbox for horizontal alignment */
     justify-content: flex-end; /* Align links to the right */
     gap: 30px; /* Space between list items */
   }
 
-  .nav-links li {
+  .side-nav li {
     margin: 0; /* Reset margin for desktop view */
   }
 
-  .nav-links a {
+  .side-nav a {
     font-size: 16px; /* Adjust font size */
   }
+  .side-nav li.hold-place {
+    display: inline-block;
+    margin-bottom: 0;
+  }
 
-  .nav-links a:hover::after {
+  .side-nav a:hover::after {
     content: '';
     position: absolute;
     /* bottom: -5px; */
@@ -123,3 +133,4 @@
     transition: width 0.3s ease;
   }
 }
+

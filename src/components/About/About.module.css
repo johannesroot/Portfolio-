@@ -104,6 +104,7 @@
   }
 
   .imageContainer {
+    display: none;
     margin-bottom: 30px; /* More space between image and text */
   }
 

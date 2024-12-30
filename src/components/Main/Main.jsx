@@ -1,10 +1,17 @@
 import React from "react";
 import './Main.css';
-import john from "../../assets/image/joo.jpg";  // Correct path to the image
+import john from "../../assets/image/joo.jpg";
 
-const Main = () => {
+const Main = ({ isMenuOpen }) => {
   return (
-    <main className="main-container" id="main">
+    <main
+      className="main-container"
+      id="main"
+      style={{
+        marginTop: isMenuOpen ? "430px" : "100px", // Adjust dynamically based on menu state
+        
+      }}
+    >
       <div className="text-container">
         <p className="greeting">Hello</p>
         <h1 className="name">Yohannes Gigar</h1>
@@ -15,6 +22,6 @@ const Main = () => {
       </div>
     </main>
   );
-}
+};
 
 export default Main;

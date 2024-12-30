@@ -1,11 +1,12 @@
 /* Main container */
 .main-container {
   display: flex;
-  flex-wrap: wrap; /* Allows the elements to wrap on smaller screens */
+  flex-wrap: wrap;   /* Allows the elements to wrap on smaller screens */
   height: 600px;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
-  background-color: black;
+  background: black;
   color: white;
   padding: 60px 40px;
   margin-top: 60px;
@@ -30,7 +31,7 @@
   font-weight: bold;
   margin: 8px 0;
   color: #f0a500;
-  border-right: 4px solid white;
+  /* border-right: 4px solid white; */
   width: 0;
   white-space: nowrap;
   overflow: hidden;
@@ -74,6 +75,7 @@
 /* Responsive styles for tablets and smaller screens */
 @media (max-width: 1024px) {
   .main-container {
+    margin-top: 108px;
     flex-direction: column; /* Stack the text and image containers */
     height: auto; /* Remove fixed height to accommodate stacked layout */
     padding: 40px 20px; /* Reduce padding */

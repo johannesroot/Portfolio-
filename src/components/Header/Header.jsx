@@ -9,23 +9,35 @@ const Header = () => {
     setIsMenuOpen((prev) => !prev);
   };
 
+  const handleLinkClick = (e) => {
+    // Prevent menu from closing immediately after clicking a link
+    const target = document.querySelector(e.target.getAttribute("href"));
+    if (target) {
+      window.scrollTo({
+        top: target.offsetTop,
+        behavior: "smooth",
+      });
+    }
+    setIsMenuOpen(false); // Close the menu after the link is clicked
+  };
+
   return (
-    <header className={`header ${isMenuOpen ? "menu-open" : ""}`}>
+    <header className="header">
       <div className="logo">
-        <li><a href="/">John</a></li>
+        <a href="/">John</a>
       </div>
       <div className="menu-icon" onClick={toggleMenu}>
         {isMenuOpen ? <FaTimes /> : <FaBars />}
       </div>
-      <nav className={`nav-links ${isMenuOpen ? "show" : ""}`}>
+      <nav className={`side-nav ${isMenuOpen ? "open" : ""}`}>
         <ul>
-          <li><a href="#main" onClick={() => setIsMenuOpen(false)}>Home</a></li>
-          <li><a href="#about" onClick={() => setIsMenuOpen(false)}>About</a></li>
-          <li><a href="#resume" onClick={() => setIsMenuOpen(false)}>Resume</a></li>
-          <li><a href="#services" onClick={() => setIsMenuOpen(false)}>Services</a></li>
-          <li><a href="#skills" onClick={() => setIsMenuOpen(false)}>Skills</a></li>
-          <li><a href="#projects" onClick={() => setIsMenuOpen(false)}>Projects</a></li>
-          <li><a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</a></li>
+          <li><a href="#main" onClick={handleLinkClick}>Home</a></li>
+          <li><a href="#about" onClick={handleLinkClick}>About</a></li>
+          <li><a href="#resume" onClick={handleLinkClick}>Resume</a></li>
+          <li><a href="#services" onClick={handleLinkClick}>Services</a></li>
+          <li><a href="#skills" onClick={handleLinkClick}>Skills</a></li>
+          <li><a href="#projects" onClick={handleLinkClick}>Projects</a></li>
+          <li><a href="#contact" onClick={handleLinkClick}>Contact</a></li>
         </ul>
       </nav>
     </header>

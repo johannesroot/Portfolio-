@@ -100,8 +100,7 @@
 /* Responsive design for very small screens */
 @media (max-width: 480px) {
   .skillGrid {
-    grid-template-columns: 1fr; /* Single column */
-    gap: 10px;
+     gap: 10px;
   }
 
   .skillBox {

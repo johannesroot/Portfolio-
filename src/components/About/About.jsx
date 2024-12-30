@@ -17,10 +17,7 @@ I specialize in web development, particularly with technologies such as JavaScri
 
 I am continuously learning and growing, always seeking opportunities to refine my skills and contribute to impactful projects. With a strong foundation in full-stack development, I am excited about the future of technology and the endless possibilities that come with it.
         </p>
-        <div className={styles.contactButtons}>
-          <button className={styles.contactBtn}>Contact Me</button>
-          <button className={styles.portfolioBtn}>Portfolio</button>
-        </div>
+         
       </div>
     </section>
   );
